@@ -7,9 +7,8 @@ class ExampleModel(models.Model):
     _description = 'It is an example model for creating example data'
     _order = 'create_date'
 
-
-    example_boolean = fields.Boolean('Example Boolean', default=False)
     name = fields.Char('Example Char')
+    example_boolean = fields.Boolean('Example Boolean', default=False)
     example_date = fields.Date('Example Date')
     example_float = fields.Float('Example Float', default=0.0)
     example_html = fields.Html('Example Html')

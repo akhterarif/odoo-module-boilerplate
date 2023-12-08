@@ -1,0 +1,11 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Example data -->
+        <record id="example_data_1" model="example_module.example_model">
+            <field name="name">Example Name 1</field>
+            <field name="example_boolean">False</field>
+            <field name="example_float">99.99</field>
+            <field name="example_html">Exxample HTML Data</field>
+        </record>
+    </data>
+</odoo>

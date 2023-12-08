@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<odoo noupdate="1">
+    <record id="example_demo_data_1" model="example_module.example_model">
+        <field eval="&quot;Demo Example Name&quot;" name="name" />
+        <field eval="&quot;True&quot;" name="example_boolean" />
+        <field eval="&quot;77.77&quot;" name="example_float" />
+    </record>
+</odoo>

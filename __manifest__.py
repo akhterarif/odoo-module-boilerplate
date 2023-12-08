@@ -22,11 +22,13 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'data/example_data.xml',
         'views/example.xml',
         'views/example_menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
+        'demo/demo_data.xml'
     ],
     'application': True,
     'installable': True
