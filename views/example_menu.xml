@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Example Main Menu -->
+        <menuitem
+            id="example_main_menu"
+            name="Example Main Menu"
+            sequence="1"
+        />
+
+        <!-- Example Top Menu -->
+        <menuitem
+            id="example_top_menu"
+            name="Example Top Menu"
+            parent="example_main_menu"
+            sequence="10"
+        />
+
+        <!-- Example Sub Menu -->
+        <menuitem
+            id="example_sub_menu"
+            name="Example Sub Menu"
+            action="example_module.example_model_action"
+            parent="example_top_menu"
+            sequence="10"
+        />
+    </data>
+</odoo>

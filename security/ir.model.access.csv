@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_eample_module_example_model,access.eample.module.example.model,model_example_module_example_model,,1,1,1,1
+
+
+
+
+
