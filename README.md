@@ -35,7 +35,7 @@ wizards
 ## What's in it?
 Currently, following example file and code has been added. 
 - Example Model with some example fields
-- Example View (Tree, Form) 
+- Example Views (Tree, Form, Pivot and Graph) 
 - Example Main Menu, Top Menu, and Submenu
 - Example Data 
 - Example Demo file 
