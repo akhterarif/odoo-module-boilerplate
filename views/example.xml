@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- Example Form View -->
         <record id="example_model_view_form" model="ir.ui.view">
             <field name="name">example.model.view.form</field>
             <field name="model">example_module.example_model</field>
@@ -34,6 +35,7 @@
             </field>
         </record>
 
+        <!-- Example Tree View -->
         <record id="example_module.example_model_view_tree" model="ir.ui.view">
             <field name="name">example.module.example.model.view.tree</field>
             <field name="model">example_module.example_model</field>
@@ -47,10 +49,62 @@
             </field>
         </record>
 
+        <!-- Example Pivot View -->
+        <record id="example_module.example_model_view_pivot" model="ir.ui.view">
+            <field name="name">example.module.example.model.view.pivot</field>
+            <field name="model">example_module.example_model</field>
+            <field name="arch" type="xml">
+                <pivot string="Example Pivot View" sample="1">
+                    <field name="example_date" interval="week" type="row"/>
+                    <field name="example_float" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <!-- Example Graph View -->
+        <record id="example_module.example_model_view_graph" model="ir.ui.view">
+            <field name="name">example.module.example.model.view.pivot</field>
+            <field name="model">example_module.example_model</field>
+            <field name="arch" type="xml">
+                <graph string="Example Graph View" sample="1">
+                    <field name="example_date"/>
+                    <field name="example_float" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+
+        <!-- To show multiple views in a window like list, pivot, graph -->
+        <!-- We have to use act.window.view -->
+        <record id="example_module.example_model_action_form_view" model="ir.actions.act_window.view">
+            <field name="view_mode">form</field>
+            <field name="sequence">2</field>
+            <field name="view_id" ref="example_module.example_model_view_form"/>
+            <field name="act_window_id" ref="example_module.example_model_action"/>
+        </record>
+        <record id="example_module.example_model_action_tree_view" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="sequence">1</field>
+            <field name="view_id" ref="example_module.example_model_view_tree"/>
+            <field name="act_window_id" ref="example_module.example_model_action"/>
+        </record>
+        <record id="example_module.example_model_action_pivot_view" model="ir.actions.act_window.view">
+            <field name="view_mode">pivot</field>
+            <field name="sequence">3</field>
+            <field name="view_id" ref="example_module.example_model_view_pivot"/>
+            <field name="act_window_id" ref="example_module.example_model_action"/>
+        </record>
+        <record id="example_module.example_model_action_graph_view" model="ir.actions.act_window.view">
+            <field name="view_mode">graph</field>
+            <field name="sequence">4</field>
+            <field name="view_id" ref="example_module.example_model_view_graph"/>
+            <field name="act_window_id" ref="example_module.example_model_action"/>
+        </record>
+
+        <!-- Example Action window to show the views in a window. -->
         <record id="example_module.example_model_action" model="ir.actions.act_window">
             <field name="name">Example Action</field>
             <field name="res_model">example_module.example_model</field>
-            <field name="view_mode">tree,form</field>
             <field name="domain">[]</field>
             <field name="context">{}</field>
         </record>
